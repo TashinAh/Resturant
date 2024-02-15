@@ -1,0 +1,98 @@
+@media screen and (max-width: 850px){
+	section{
+		padding: 3rem 1.8rem;
+	}
+
+	html{
+		font-size: 55%;
+	}
+	.header{
+		position: sticky;
+		top: 0; left: 0; right: 0;
+		padding: 1rem 5%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	#menu-bar{
+		display: block;
+	}
+	.fa-times{
+		transform: rotate(90deg);
+	}
+	.navbar{
+		position: absolute;
+		top: 99%; left: 0; right: 0;
+		background: #473930;
+		clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+	}
+	.header .navbar.active{
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	}
+	.navbar ul{
+		display: block;
+		text-align: left;
+	}
+	.navbar ul li{
+		border-bottom: 2px solid #DADADA;
+	}
+	.navbar ul li a{
+		color: #DADADA;
+		padding-left: 2rem;
+	}
+	.navbar ul li a:hover{
+		color: #DADADA;
+	}
+	.navbar ul li ul{
+		position: relative;
+		width: 100%;
+		background: #473930;
+		border-top: none;
+	}
+	.navbar ul li ul li{
+		border-top: .2px solid #DADADA;
+		border-bottom: .2px solid #DADADA;
+	}
+	.navbar ul li ul li a{
+		color: #DADADA;
+		padding-left: 4rem;
+	}
+	.navbar ul li ul li a:hover{
+		color: #DADADA;
+	}
+	.cuisine-content{
+		display: block;
+	}
+}
+@media screen and (max-width: 720px){
+	.footer .footer-menu-cell a{
+		margin-right: 10rem;
+	}
+	.copywrite{
+		display: block;
+		text-align: center;
+	}
+	.copywrite small{
+		display: block;
+	}
+}
+@media screen and (max-width: 576px){
+	.footer .footer-menu-cell{
+		display: block;
+	}
+	.footer .footer-menu-cell a{
+		margin-right: 0rem;
+		margin-bottom: 1rem;
+	}
+	.fusion-img{
+		float: none;
+	}
+}
+@media screen and (max-width: 350px){
+	.header .logo{
+		font-size: 4rem;
+	}
+	html{
+		font-size: 45%;
+	}
+}

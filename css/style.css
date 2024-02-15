@@ -1,0 +1,610 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=PT+Sans:wght@400;700&display=swap');
+:root{
+	--anchor-tag: #D19D7C;
+	--anchor-tag-hover: #F7E2BA;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none; outline: none;
+	transition: all .4s cubic-bezier(.43, 1.1, .62, 1.08);
+	text-transform: capitalize;
+	text-decoration: none;
+	list-style-type: none;
+}
+
+* > img{
+	user-select: none;
+	pointer-events: none;
+}
+
+body{
+	background: #000;
+}
+
+html{
+	font-size: 65%;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	scroll-padding-top: 6rem;
+}
+
+html::webkit-scrollbar{
+	width: 1rem;
+}
+
+html::webkit-scrollbar-track{
+	background-color: var(--white);
+}
+
+html::webkit-scrollbar-thumb{
+	background-color: var(--peru);
+}
+
+section{
+	padding: 4rem 9%;
+}
+a{
+	color: var(--anchor-tag);
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight: normal;
+}
+p{
+	font-family: none;
+	line-height: 2.3rem;
+}
+.to-top{
+	background: #fff;
+	color: #000;
+	position: fixed;
+	right: 3rem;
+	bottom: 2rem;
+	width: 40px;
+	height: 40px;
+	border-radius: 10%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2rem;
+	pointer-events: none;
+	opacity: 0;
+}
+.to-top.active{
+	pointer-events: auto;
+	opacity: 1;
+	bottom: 2rem;
+}
+
+.customize{
+	background: #fff;
+	color: #000;
+	position: fixed;
+	right: 3rem;
+	top: 4rem;
+	width: 40px;
+	height: 40px;
+	border-radius: 10%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2rem;
+	pointer-events: none;
+	opacity: 0;
+}
+/*============================
+* header part start
+==================================*/
+.header{
+	top: 0; left: 0; right: 0;
+	z-index: 1000;
+	padding: 2rem 0 1.8rem 0;
+	text-align: center;
+	padding: 1rem 0 1rem 0;
+	background: black;
+}
+.header .logo{
+	font-size: 6rem;
+	color: #eee;
+}
+.navbar{
+	text-align: center;
+	padding: 1rem 0 1rem 0;
+}
+.navbar ul{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.navbar ul li{
+	position: relative;
+}
+.navbar ul li a{
+	display: block;
+	padding: 1rem 3rem 2rem 0;
+	font-size: 2rem;
+	color: #D19D7C;
+}
+.navbar ul li a:hover{
+	color: #F7E2BA;
+}
+.navbar ul li ul{
+	position: absolute;
+	top: 100%; left: 0;
+	background: red;
+	display: none;
+	width: 200px;
+	background: #fff;
+	border-top: .3rem solid #6D4412;
+}
+.navbar ul li ul li a{
+	color: #444;
+	text-align: left;
+	font-family: 'PT Sans', sans-serif;
+	font-size: 1.7rem;
+	font-weight: normal;
+	border-bottom: .1px dotted #888;
+	padding-top: 1rem;
+	padding-left: 1rem;
+	padding-bottom: .5rem;
+}
+.navbar ul li ul li a .fa-heart{
+	color: #870000;
+	margin-right: 1rem;
+	font-size: 1.6rem;
+}
+.navbar ul li ul li a:hover{
+	color: #444;
+}
+.navbar ul li:focus-within ul,
+.navbar ul li:hover ul{
+	display: block;
+}
+#menu-bar{
+	color: #999;
+	font-size: 2rem;
+	display: none;
+	cursor: pointer;
+}
+
+
+/*============================
+* header part end
+==================================*/
+.home-part{
+	padding: 0;
+	width: 100%;
+	height: 80%;
+}
+.home-part img{
+	width: 100%;
+}
+
+/*============================
+* footer part start
+==================================*/
+.footer{
+	padding: 4rem 0;
+	text-align: center;
+	font-size: 1.6rem;
+}
+.footer .footer-menu-cell{
+	display: flex;
+	justify-content: center;
+	margin: 4rem 0 6rem 0;
+}
+.footer .footer-menu-cell a{
+	margin-right: 15rem;
+	text-align: center;
+	display: block;
+	font-size: 1.6rem;
+	color: #D19D7C;
+}
+.footer .footer-menu-cell a:nth-child(3){
+	margin-right: 0;
+}
+.footer .footer-menu-cell a:hover{
+	color: #F7E2BA;
+}
+.website-link{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.website-link a{
+	color: #999;
+	margin-right: 3rem;
+	margin-left: 3rem;
+}
+.website-link a:hover{
+	color: #fff;
+}
+.footer-address{
+	padding: 2rem 0;
+}
+.footer-address p{
+	font-weight: normal;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #999;
+}
+.footer-address p:nth-child(2){
+	font-size: 1.8rem;
+}
+.footer-address p span{
+	color: #eee;
+	font-size: 1.5rem;
+}
+.footer .p{
+	color: #eee;
+}
+.copywrite{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 9%;
+	background: #333;
+	color: #999;
+	font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+/* 02 page =================================
+	about-part start
+================================================== */
+.fusion-part{
+	color: #999;
+}
+.fusion-part h2{
+	color: #999;
+	font-size: 3.8rem;
+	font-weight: normal;
+}
+.fusion-part h2 span{
+	color: #fff;
+}
+.fusion-content{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+}
+.fusion-content .fusion-column{
+	flex: 1 1 70%;
+}
+.fusion-content .fusion-column .line{
+	display: block;
+	width: 100%;
+	height: 0.1rem;
+	background: #999;
+	margin-bottom: 4rem;
+}
+.fusion-content .fusion-column .line:nth-child(1){
+	margin-bottom: .8rem;
+}
+.fusion-content .fusion-column-2{
+	flex: 1 1 28%;
+}
+.fusion-content .fusion-column-2 img{
+	width: 100%;
+}
+.fusion-content .fusion-column p{
+	font-size: 1.4rem;
+	color: #999;
+	margin-bottom: 3rem;
+}
+.fusion-text{
+	flex: 1 1 38%;
+}
+.fusion-text-2{
+	flex: 1 1 60%;
+}
+.fusion-img{
+	max-width: 380px;
+	float: left;
+	margin-right: 1.3rem;
+}
+.fusion-img img{
+	width: 100%;
+}
+.image-detail p{
+	font-size: 1.4rem;
+}
+
+/*================================
+fusion-separetor-border
+===========================================*/
+.fusion-separetor-border{
+	padding: 1rem 9%;
+}
+.fusion-separetor-border .border-line{
+	width: 100%;
+	height: 1px;
+	background: #999;
+}
+.fusion-separetor-border .border-line:nth-child(1){
+	margin-bottom: 1rem;
+}
+/*================================
+fusion-separetor-border
+===========================================*/
+.fusion-text-box{
+	text-align: center;
+	border-width: .1rem .1rem .1rem .3rem;
+	border-color: #999;
+	border-style: solid;
+	padding: 2rem;
+	box-sizing: border-box;
+}
+.fusion-text-box a:hover{
+	transform: scale(1.05);
+}
+.fusion-text-box h3{
+	color: #DFA54F;
+	font-weight: normal;
+	font-size: 2.7rem;
+	padding-bottom: 1rem;
+}
+.fusion-text-box h5{
+	font-weight: normal;
+	font-size: 1.5rem;
+	color: #EBA45B;
+}
+.fusion-text-box h5:nth-child(2),
+.fusion-text-box h5:nth-child(4){
+	margin-bottom: 2rem;
+}
+.fusion-text-box h5 span{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.fusion-text-box h5 a{
+	display: block;
+	color: #F7F7F7;
+}
+.member-contact{
+	font-size: 1.5rem;
+	color: #fff;
+	text-align: center;
+	margin-top: 4rem;
+	margin-bottom: 3rem;
+}
+.member-contact strong{
+	font-weight: 600;
+}
+.member-contact a:hover{
+	color: var(--anchor-tag-hover);
+}
+
+
+.fusion-text-2 .image-detail h4{
+	color: #996648;
+	font-size: 2.2rem;
+}
+.fusion-text-2 .image-detail small{
+	display: block;
+	font-size: 1.5rem;
+	margin: 1.8rem 0;
+	color: #F3C39F;
+}
+.fusion-text-2 .image-detail p{
+	color: #999;
+	font-size: 1.5rem;
+	margin-bottom: 2.5rem;
+}
+/* 02 page =================================
+	about-part end
+================================================== */
+
+
+
+
+
+/* 03 page =================================
+	cuisine-part start
+================================================== */
+.cuisine-part h2{
+	color: #999;
+	font-size: 3.8rem;
+	font-weight: normal;
+	margin-bottom: 2rem;
+}
+.cuisine-part h2 span{
+	color: #fff;
+}
+.cuisine-content{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2%;
+}
+.cuisine{
+	flex: 1 1 49%;
+}
+
+.cuisine-content .cuisine .line{
+	display: block;
+	width: 100%;
+	height: 1px;
+	background: #999;
+	margin-bottom: 1rem;
+}
+.cuisine .border-line{
+	margin-bottom: 2rem;
+}
+.cuisine p{
+	color: #999;
+	margin-bottom: 1.8rem;
+	font-size: 1.5rem;
+}
+.cuisine .image img{
+	width: 100%;
+}
+
+
+.frame-box{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+}
+.frame-box .box-1{
+	flex: 1 1 49rem;
+	background: #1B0F07;
+}
+.frame-box .box-1 img{
+	width: 100%;
+	padding: .3rem;
+}
+.frame-box .box-1 .image-content h3{
+	text-align: center;
+	font-size: 2.2rem;
+	font-weight: normal;
+	color: #999;
+	padding: .8rem 0;
+}
+.frame-box .box-1 .image-content p{
+	color: #999;
+	padding: 1rem 2rem 2rem 2rem;
+	font-size: 1.5rem;
+}
+/* 03 page =================================
+	cuisine-part end
+================================================== */
+
+
+
+
+
+
+
+/* 02 page =================================
+	RESERVATIONS-part start
+================================================== */
+.reservation-part h2{
+	color: #999;
+	font-weight: normal;
+	font-size: 3.5rem;
+	margin-bottom: 2rem;
+}
+.separate-line{
+	margin-bottom: 4rem;
+}
+.separate-line .line{
+	width: 100%;
+	height: .1rem;
+	background: #999;
+	margin-bottom: 1rem;
+}
+.reservation-column{
+	flex: 1 1 49rem;
+}
+.reservation-column img{
+	width: 100%;
+}
+.reservation-column p{
+	color: #999;
+	font-size: 1.6rem;
+	margin-bottom: 2.5rem;
+}
+.reservation-column p span{
+	font-size: 1.9rem;
+	letter-spacing: .1rem;
+}
+.reservation-column p strong{
+	color: #fff;
+}
+.time-schedule{
+	color: #fff;
+	padding-top: 2rem;
+}
+.time-schedule h3{
+	font-size: 3rem;
+	font-weight: normal;
+	margin-bottom: 1rem;
+}
+.time-schedule h6{
+	font-size: 2rem;
+	font-weight: normal;
+	padding: 1.5rem 0 1rem 0;
+}
+.time-schedule p{
+	margin-left: 2.5rem;
+}
+
+
+.direction-heading{
+	text-align: center;
+	margin-bottom: 4rem;
+}
+.direction-heading i{
+	background: #777;
+	color: #000;
+	font-size: 1.5rem;
+	border-radius: 50%;
+	padding: 1rem;
+}
+.direction-heading h1{
+	color: #fff;
+	font-size: 3.8rem;
+	margin-bottom: 2rem;
+}
+.direction-heading h3{
+	font-size: 2rem;
+	color: #999;
+}
+
+.form-separt h2{
+	font-size: 2rem;
+	color: #fff;
+	margin: 2rem 0;
+}
+.form-separt ul li{
+	list-style-type: square;
+	color: #999;
+	font-size: 1.6rem;
+	margin-left: 5rem;
+	line-height: 2.2rem;
+}
+/* 02 page =================================
+	RESERVATIONS-part end
+================================================== */
+
+
+
+/* 02 page =================================
+	PRIVATE-events part start
+================================================== */
+.events h2{
+	font-size: 3rem;
+	color: #999;
+}
+.event-box{
+	border-color: #fff;
+	border-style: solid;
+	border-width: 1.5px 1.5px 1.5px 3px;
+	padding: 3rem;
+}
+.event-box h3{
+	color: #999;
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+}
+.event-box small{
+	font-size: 1.4rem;
+	color: #999;
+}
+.event-box p{
+	font-size: 1.5rem;
+	color: #999;
+}
+
+
